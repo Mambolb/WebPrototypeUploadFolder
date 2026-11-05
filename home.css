@@ -1,0 +1,19 @@
+/* Figma MergedTest_DefaultV2: layout; HoverV2: hover behavior ONLY.
+   Exact desktop canvas: 1440×1024, columns 524/261/262/262/131, row-height 28,
+   text Geist Mono 12px/16px. No fills at rest. */
+:root{--row-height:28px;--header-height:28px;--col-name:524px;--col-category:261px;--col-medium:262px;--col-context:262px;--col-year:131px;--hover-blur:11.75px}
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:#000;color:#fff}body{overflow-x:hidden}
+.home-viewport{position:relative;width:1440px;height:1024px}
+.home-canvas{position:absolute;left:0;top:0;width:1440px;min-height:1024px;overflow:hidden;isolation:isolate;transform-origin:top left;background:#000;color:#fff;font:400 12px/16px 'Geist Mono','Courier New',monospace;text-transform:uppercase}
+.hover-backdrop{position:absolute;inset:0;display:none;overflow:hidden;z-index:0;pointer-events:none;background:#dfe8e6}
+.hover-backdrop img{position:absolute;left:-28px;top:0;width:1561px;height:1041px;max-width:none;display:block;object-fit:cover;filter:blur(var(--hover-blur));transform:translateZ(0)}
+.home-canvas.has-hover .hover-backdrop{display:block}
+.top-header{position:absolute;top:0;left:0;width:1440px;height:56px;z-index:3;background:#000;color:#fff}
+.intro{position:absolute;top:0;left:0;width:784px;height:56px;margin:0;padding:4px 8px;display:flex;align-items:center;white-space:normal;font:inherit}
+.header-item{position:absolute;top:0;width:132px;height:56px;padding:4px 8px;display:flex;align-items:flex-start;font:inherit}
+.header-mail{left:1176px}.header-instagram{left:1308px}
+.archive{position:absolute;top:56px;left:0;z-index:2;display:flex;align-items:flex-start;width:1440px;min-height:968px;outline:none}
+.column{position:relative;flex:none;min-height:968px}.column[data-field=name]{width:var(--col-name)}.column[data-field=category]{width:var(--col-category)}.column[data-field=medium]{width:var(--col-medium)}.column[data-field=context]{width:var(--col-context)}.column[data-field=year]{width:var(--col-year)}
+.cell{position:absolute;left:0;width:100%;margin:0;border:0;border-radius:0;padding:4px 8px;display:flex;align-items:flex-start;justify-content:flex-start;font:inherit;line-height:16px;color:inherit;text-transform:uppercase;text-align:left;text-decoration:none;background:transparent;white-space:normal}
+.cell.selected{background:#000;color:#fff}.cell.is-header{top:0;height:28px;cursor:pointer}.cell.row-name{cursor:pointer}
+.cell:focus-visible,.archive:focus-visible{outline:1px solid #fff;outline-offset:-1px}
