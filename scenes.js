@@ -1,5 +1,5 @@
-/* Coordinates and source text from CodeExport_ProtV1.rtf and verified earlier Figma V1. */
-window.PORTFOLIO_SCENES={
+/* V5: source coordinates transcribed from CodeExport_ProtV5.rtf; original media retained. */
+window.PORTFOLIO_SCENES = {
   "shahed": {
     "height": 7346,
     "background": "#000000",
@@ -8,13 +8,13 @@ window.PORTFOLIO_SCENES={
     "text": {
       "y": 1024,
       "h": 557,
-      "headingX": 262,
+      "headingX": 131,
       "headingY": 84,
       "headingW": 523,
       "headingH": 28,
-      "descriptionX": 262,
+      "descriptionX": 131,
       "descriptionY": 140,
-      "descriptionW": 916,
+      "descriptionW": 523,
       "descriptionH": 341
     },
     "media": [
@@ -156,7 +156,7 @@ window.PORTFOLIO_SCENES={
     "height": 1580,
     "background": "#000000",
     "title": "Digital Garden, 2026\nMariia Piletska, Oleksandr Bichuk, Laura Hogrefe, Jonas Wenzel",
-    "description": "For this project I did interactive digital garden in Touchdesigner\nDescription:\nWhat can spirituality look like in an environment of digitalization? Digital Garden explores this question through a spatial installation that invites visitors to interact and unwind as the garden grows. By moving a rainstick, a percussion instrument usually used for relaxation and meditation, visitors make a digital garden grow. The stick’s movement determines the garden’s growth and the swaying of its individual weeds, creating a visual metaphor of presence and spiritual growth. It weaves a connection between the rain-like sound of the stick, the visitor’s movement and the growth of the digital garden.",
+    "description": "Link: https://youtu.be/S5CZSYIcKyY\n\nFor this project I did interactive digital garden in Touchdesigner\n\nDescription:\nWhat can spirituality look like in an environment of digitalization? Digital Garden explores this question through a spatial installation that invites visitors to interact and unwind as the garden grows. By moving a rainstick, a percussion instrument usually used for relaxation and meditation, visitors make a digital garden grow. The stick’s movement determines the garden’s growth and the swaying of its individual weeds, creating a visual metaphor of presence and spiritual growth. It weaves a connection between the rain-like sound of the stick, the visitor’s movement and the growth of the digital garden.",
     "text": {
       "y": 1024,
       "h": 556,
@@ -176,11 +176,13 @@ window.PORTFOLIO_SCENES={
         "w": 1440,
         "h": 1024,
         "background": "#742222",
-        "src": "../assets/garden-hero.png",
+        "src": "../assets/garden-hero.mp4",
         "ix": -262,
         "iy": -237,
         "iw": 2385,
-        "ih": 1342
+        "ih": 1342,
+        "kind": "video",
+        "poster": "../assets/preview-digital-garden.webp"
       }
     ]
   },
@@ -208,6 +210,103 @@ window.PORTFOLIO_SCENES={
         "w": 1440,
         "h": 813,
         "src": "../assets/whoami-film.png",
+        "ix": -3,
+        "iy": 0,
+        "iw": 1446,
+        "ih": 813
+      }
+    ]
+  },
+  "design-as-epistemic": {
+    "height": 4588,
+    "background": "#000000",
+    "title": "Design as epistemic instrument, 2026\nOleksandr Bichuk and Antonia Ravanal Lara",
+    "description": "This publication traces the development of information design as a tool, from its historical origins to its contemporary uses. It argues that some relations are too complex for linear language alone, and that design does not merely represent knowledge but actively produces it. By making patterns visible, informational design can turn data into evidence, evidence into advocacy, and advocacy into the conditions for systematic change.\n\nConcept and Design: Oleksandr Bichuk\nText: Antonia Ravanal Lara\nCreated as part of the project seminar “Rewind, Revisit, Recollect & Publish!”\nDirected by: Prof. Franziska Morlok, Dr. Julia Meer, KM Jasmina Begović, LB Paul Zech\nBerlin University of the Arts\nPrint: UdK Berlin\nPaper: Metapaper SMOOTH Warmwhite 120 gr\nFont: Suisse Works/Intl",
+    "text": {
+      "y": 1024,
+      "h": 556,
+      "headingX": 131,
+      "headingY": 84,
+      "headingW": 523,
+      "headingH": 28,
+      "descriptionX": 131,
+      "descriptionY": 140,
+      "descriptionW": 523,
+      "descriptionH": 341
+    },
+    "media": [
+      {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 1024,
+        "src": "../assets/design-hero.mp4",
+        "kind": "video",
+        "poster": "../assets/preview-design.webp",
+        "ix": -11,
+        "iy": -47,
+        "iw": 1462,
+        "ih": 1097
+      },
+      {
+        "x": 0,
+        "y": 1580,
+        "w": 1440,
+        "h": 894,
+        "src": "../assets/design-1.png",
+        "ix": -53,
+        "iy": 0,
+        "iw": 1605,
+        "ih": 904
+      },
+      {
+        "x": 0,
+        "y": 2474,
+        "w": 1440,
+        "h": 1033,
+        "src": "../assets/design-2.png",
+        "ix": -197,
+        "iy": 0,
+        "iw": 1834,
+        "ih": 1033
+      },
+      {
+        "x": 0,
+        "y": 3507,
+        "w": 1440,
+        "h": 1081,
+        "src": "../assets/design-3.png",
+        "ix": -464,
+        "iy": 0,
+        "iw": 1920,
+        "ih": 1081
+      }
+    ]
+  },
+  "the-time": {
+    "height": 1326,
+    "background": "#000000",
+    "title": "The Time, 2022\nOleksandr Bichuk",
+    "description": "Link: https://youtu.be/NQYKTy_Gb70",
+    "text": {
+      "y": 859,
+      "h": 467,
+      "headingX": 131,
+      "headingY": 39,
+      "headingW": 523,
+      "headingH": 28,
+      "descriptionX": 131,
+      "descriptionY": 95,
+      "descriptionW": 523,
+      "descriptionH": 372
+    },
+    "media": [
+      {
+        "x": 0,
+        "y": 0,
+        "w": 1440,
+        "h": 813,
+        "src": "../assets/time-hero.png",
         "ix": -3,
         "iy": 0,
         "iw": 1446,

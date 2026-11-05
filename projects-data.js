@@ -1,5 +1,15 @@
-/* Metadata faithfully transcribed from WebSiteTable.numbers (Table 1). */
+/* V5: previous table metadata preserved; unprovided fields for The Time are shown as —. */
 window.SITE_PROJECTS = [
+  {
+    "id": "design-as-epistemic",
+    "name": "Design as Epistemic Instrument",
+    "category": "Research",
+    "medium": "Publication",
+    "context": "UdK Berlin",
+    "year": "2026",
+    "preview": "assets/preview-design.webp",
+    "href": "projects/design-as-epistemic.html"
+  },
   {
     "id": "shahed",
     "name": "Shahed-136 / Geran-2",
@@ -57,7 +67,17 @@ window.SITE_PROJECTS = [
     "medium": "Photo",
     "context": "Independent",
     "year": "2024-2025",
-    "preview": null,
-    "href": null
+    "preview": "assets/preview-irl.webp",
+    "href": "projects/irl-glitch.html"
+  },
+  {
+    "id": "the-time",
+    "name": "The Time",
+    "category": "—",
+    "medium": "Video",
+    "context": "—",
+    "year": "2022",
+    "preview": "assets/preview-time.webp",
+    "href": "projects/the-time.html"
   }
 ];
