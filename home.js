@@ -9,7 +9,7 @@ const canvas=document.querySelector('#home-canvas');
 const viewport=document.querySelector('#home-viewport');
 const picture=document.querySelector('#preview-image');
 const fields=['name','category','medium','context','year'];
-const labels={name:'INDEX ↓',category:'CATEGORY',medium:'MEDIUM',context:'CONTEXT',year:'YEAR'};
+const labels={name:'INDEX',category:'CATEGORY',medium:'MEDIUM',context:'CONTEXT',year:'YEAR'};
 const css=getComputedStyle(canvas);
 const ROW=parseFloat(css.getPropertyValue('--row-height'))||28;
 const HEADER=parseFloat(css.getPropertyValue('--header-height'))||28;
@@ -28,7 +28,12 @@ function positionCell(node,from,to){node.style.top=(HEADER+from*ROW)+'px';node.s
 function render(){
   const columns=fields.map(field=>{
     const col=make('div','column');col.dataset.field=field;
-    const title=make('button','cell is-header',labels[field]);title.type='button';title.style.top='0px';title.style.height=HEADER+'px';title.setAttribute('aria-label','Sort by '+field);
+    const title=make('button','cell is-header');title.type='button';title.style.top='0px';title.style.height=HEADER+'px';
+    title.append(document.createTextNode(labels[field]));
+    const arrow=make('span','sort-arrow',field===sortKey ? (ascending?'↑':'↓') : '↓');
+    arrow.setAttribute('aria-hidden','true');title.append(arrow);
+    title.setAttribute('aria-label','Sort by '+field);
+    title.setAttribute('aria-pressed',String(field===sortKey));
     title.addEventListener('click',()=>sortBy(field));col.append(title);
     if(field==='name'){
       ordered.forEach((p,i)=>{
@@ -46,8 +51,9 @@ function render(){
 function paint(){
   for(const n of archive.querySelectorAll('.selected'))n.classList.remove('selected');
   const pos=ordered.findIndex(x=>x.id===activeId);
-  if(pos<0){canvas.classList.remove('has-hover','is-light-hover');picture.removeAttribute('src');return;}
+  if(pos<0){canvas.classList.remove('has-hover','is-light-hover');canvas.removeAttribute('data-preview');picture.removeAttribute('src');return;}
   const p=ordered[pos];
+  canvas.dataset.preview=p.id;
   if(p.preview){picture.src=p.preview;picture.style.display='block';}
   else {picture.removeAttribute('src');picture.style.display='none';}
   canvas.classList.add('has-hover');

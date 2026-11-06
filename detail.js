@@ -49,6 +49,7 @@
       item.muted = true;
       item.loop = true;
       item.autoplay = true;
+      if (m.initialTime) { item.addEventListener('loadedmetadata',()=>{ try { item.currentTime=m.initialTime; } catch (_) {} }, {once:true}); }
       item.playsInline = true;
       item.preload = 'metadata';
       item.setAttribute('aria-label','Video from ' + slug + ' project; click to toggle sound');
@@ -78,6 +79,7 @@
   const hero = el('section','project-hero');
   hero.setAttribute('aria-label','Project cover');
   hero.style.height = `${rules.heroVh}dvh`;
+  if (rules.heroBackground) hero.style.backgroundColor=rules.heroBackground;
   const heroArt = el('div','project-hero-art');
   heroArt.style.height = fixedPx(rules.baseHeroHeight);
   heroArt.append(createMedia(heroSource));
@@ -104,7 +106,24 @@
     heading = el('h1','project-heading');
     heading.textContent = scene.title;
     description = el('p','project-description');
-    description.textContent = scene.description;
+    // Preserve original copy/line breaks but make embedded HTTPS URLs actionable.
+    const bodyCopy = scene.description || '';
+    const urlPattern = /https?:\/\/[^\s<>\"']+/g;
+    let cursor = 0;
+    for (const match of bodyCopy.matchAll(urlPattern)) {
+      const start = match.index;
+      description.append(document.createTextNode(bodyCopy.slice(cursor, start)));
+      const clean = match[0].replace(/[.,;!?]+$/, '');
+      const anchor = document.createElement('a');
+      anchor.href = clean;
+      anchor.textContent = clean;
+      anchor.target = '_blank';
+      anchor.rel = 'noopener noreferrer';
+      description.append(anchor);
+      if (clean.length !== match[0].length) description.append(document.createTextNode(match[0].slice(clean.length)));
+      cursor = start + match[0].length;
+    }
+    description.append(document.createTextNode(bodyCopy.slice(cursor)));
     textSection.append(heading,description);
     viewport.append(textSection);
   }
@@ -126,7 +145,9 @@
     const width = viewport.clientWidth || document.documentElement.clientWidth || innerWidth;
     const k = width / REF_WIDTH;
     const heroHeight = hero.getBoundingClientRect().height;
-    const coverScale = Math.max(k, heroHeight / rules.baseHeroHeight);
+    const coverScale = rules.fitMode === 'contain'
+      ? Math.min(k, heroHeight / rules.baseHeroHeight)
+      : Math.max(k, heroHeight / rules.baseHeroHeight);
     // Uniform scale preserves the image's aspect ratio. Overflow is clipped,
     // centered on the original Figma frame rather than resizing the media twice.
     heroArt.style.left = fixedPx((width - REF_WIDTH * coverScale) / 2);

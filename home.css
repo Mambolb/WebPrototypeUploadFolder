@@ -35,3 +35,13 @@
 .archive:focus-visible { outline: none; }
 /* Do not allow unknown native focus paint to mask the precise Figma fills. */
 .home-canvas .header-item { outline-offset: -1px; }
+
+/* V6.1: explicit sort indicator for each sortable column, preserved table geometry. */
+.sort-arrow { display:inline-block; margin-left:7px; flex:none; font:inherit; }
+/* Enzyklopaedie background is centered on the 1440px canvas; other Figma crops remain unchanged. */
+.home-canvas[data-preview="enzyklopaedie"] .hover-backdrop img {
+  left:50%; top:50%; transform:translate(-50%,-50%) translateZ(0);
+  object-position:center center;
+}
+/* Header external link uses Figma's exact type and hover without default underline. */
+.header-instagram { text-decoration:none; color:inherit; cursor:pointer; }

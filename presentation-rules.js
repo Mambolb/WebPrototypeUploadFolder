@@ -32,7 +32,9 @@ window.PORTFOLIO_PRESENTATION = {
   "design-as-epistemic": {
     "heroVh": 100,
     "gapVh": 0,
-    "baseHeroHeight": 1024
+    "baseHeroHeight": 1024,
+    "fitMode": "contain",
+    "heroBackground": "#d7d8d5"
   },
   "the-time": {
     "heroVh": 79.39453125,

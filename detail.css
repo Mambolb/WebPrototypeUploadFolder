@@ -31,3 +31,7 @@ body[data-project="whoami"] .project-heading { text-transform: none; }
   .project-text-region .project-description { position: relative !important; left: auto !important; top: auto !important; width: 100% !important; min-height: 0 !important; }
   .project-text-region .project-description { margin-top: 22px; }
 }
+
+/* Clickable links keep the Figma white mono typography without forced underlining. */
+.project-description a { color:inherit; font:inherit; text-decoration:none; }
+.project-description a:hover, .project-description a:focus-visible { text-decoration:underline; text-underline-offset:2px; }

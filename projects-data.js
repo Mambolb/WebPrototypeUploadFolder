@@ -1,4 +1,4 @@
-/* V5: previous table metadata preserved; unprovided fields for The Time are shown as —. */
+/* V6.1: metadata verified against WebSiteTable.numbers in Archive(2).zip (Nov 6). */
 window.SITE_PROJECTS = [
   {
     "id": "design-as-epistemic",
@@ -36,7 +36,7 @@ window.SITE_PROJECTS = [
     "category": "Generative",
     "medium": "WebSite",
     "context": "Independent",
-    "year": "2024",
+    "year": "2025",
     "preview": "assets/preview-enzyklopaedie.webp",
     "href": "projects/enzyklopaedie.html"
   },
@@ -66,16 +66,16 @@ window.SITE_PROJECTS = [
     "category": "Generative",
     "medium": "Photo",
     "context": "Independent",
-    "year": "2024-2025",
+    "year": "2023-2024",
     "preview": "assets/irl-home-background.png",
     "href": "projects/irl-glitch.html"
   },
   {
     "id": "the-time",
     "name": "The Time",
-    "category": "—",
-    "medium": "Video",
-    "context": "—",
+    "category": "Documentary",
+    "medium": "Film",
+    "context": "ZHdK Zurich",
     "year": "2022",
     "preview": "assets/preview-time.webp",
     "href": "projects/the-time.html"
