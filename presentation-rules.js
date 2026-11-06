@@ -1,4 +1,4 @@
-/* V5: height-responsive first screens; 1440 × 1024 is Figma reference. */
+/* V6: Figma reference 1440×1024. Each hero is viewport-height adaptive. */
 window.PORTFOLIO_PRESENTATION = {
   "shahed": {
     "heroVh": 100,
@@ -6,19 +6,22 @@ window.PORTFOLIO_PRESENTATION = {
     "baseHeroHeight": 1024
   },
   "turbulent": {
-    "heroVh": 100,
-    "gapVh": 0,
-    "baseHeroHeight": 1024
+    "heroVh": 79.39453125,
+    "gapVh": 4.4921875,
+    "baseHeroHeight": 813,
+    "focusY": 0
   },
   "enzyklopaedie": {
-    "heroVh": 100,
+    "heroVh": 90.8203125,
     "gapVh": 0,
-    "baseHeroHeight": 1024
+    "baseHeroHeight": 930,
+    "focusY": 0
   },
   "digital-garden": {
-    "heroVh": 100,
+    "heroVh": 79.39453125,
     "gapVh": 0,
-    "baseHeroHeight": 1024
+    "baseHeroHeight": 813,
+    "focusY": 0
   },
   "whoami": {
     "heroVh": 79.39453125,

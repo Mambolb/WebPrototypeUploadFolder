@@ -1,4 +1,4 @@
-/* V5: source coordinates transcribed from CodeExport_ProtV5.rtf; original media retained. */
+/* V6: coordinates from CodeExport_ProtV6.rtf, original source media preserved. */
 window.PORTFOLIO_SCENES = {
   "shahed": {
     "height": 7346,
@@ -87,52 +87,52 @@ window.PORTFOLIO_SCENES = {
     ]
   },
   "turbulent": {
-    "height": 1580,
+    "height": 1108,
     "background": "#000000",
     "title": "Turbulent, 2026",
     "description": "GLSL Shadering and Sound experiment",
     "text": {
-      "y": 1024,
-      "h": 556,
+      "y": 859,
+      "h": 249,
       "headingX": 131,
-      "headingY": 84,
+      "headingY": 39,
       "headingW": 523,
       "headingH": 28,
       "descriptionX": 131,
-      "descriptionY": 112,
-      "descriptionW": 916,
-      "descriptionH": 341
+      "descriptionY": 67,
+      "descriptionW": 523,
+      "descriptionH": 372
     },
     "media": [
       {
         "x": 0,
         "y": 0,
         "w": 1440,
-        "h": 1024,
+        "h": 813,
         "src": "../assets/turbulent-film.mp4",
         "poster": "../assets/turbulent-poster.png",
         "kind": "video",
-        "ix": -197,
+        "ix": -2,
         "iy": -4,
-        "iw": 1834,
-        "ih": 1032
+        "iw": 1445,
+        "ih": 813
       }
     ]
   },
   "enzyklopaedie": {
-    "height": 1580,
+    "height": 1263,
     "background": "#000000",
     "title": "Enzyklopädie der Zukunft, 2025",
     "description": "Speculative Website prototype, exploring the future as an emergent system shaped by randomness, complexity, and collective visual data. Through the continuous accumulation and rearrangement of images, the website generates evolving visual structures, questioning the boundaries between computational determinism, unpredictability, and chaos.",
     "text": {
-      "y": 1024,
-      "h": 556,
-      "headingX": 132,
-      "headingY": 84,
-      "headingW": 523,
-      "headingH": 28,
-      "descriptionX": 132,
-      "descriptionY": 112,
+      "y": 930,
+      "h": 333,
+      "headingX": 157,
+      "headingY": 39,
+      "headingW": 459,
+      "headingH": 14,
+      "descriptionX": 157,
+      "descriptionY": 67,
       "descriptionW": 523,
       "descriptionH": 341
     },
@@ -141,31 +141,31 @@ window.PORTFOLIO_SCENES = {
         "x": 0,
         "y": 0,
         "w": 1440,
-        "h": 1024,
+        "h": 930,
         "src": "../assets/enzyklopaedie-film.mp4",
         "poster": "../assets/enzyklopaedie-poster.png",
         "kind": "video",
-        "ix": -92,
-        "iy": 45,
-        "iw": 1623,
-        "ih": 913
+        "ix": -56,
+        "iy": 26,
+        "iw": 1552,
+        "ih": 873
       }
     ]
   },
   "digital-garden": {
-    "height": 1580,
+    "height": 1263,
     "background": "#000000",
     "title": "Digital Garden, 2026\nMariia Piletska, Oleksandr Bichuk, Laura Hogrefe, Jonas Wenzel",
     "description": "Link: https://youtu.be/S5CZSYIcKyY\n\nFor this project I did interactive digital garden in Touchdesigner\n\nDescription:\nWhat can spirituality look like in an environment of digitalization? Digital Garden explores this question through a spatial installation that invites visitors to interact and unwind as the garden grows. By moving a rainstick, a percussion instrument usually used for relaxation and meditation, visitors make a digital garden grow. The stick’s movement determines the garden’s growth and the swaying of its individual weeds, creating a visual metaphor of presence and spiritual growth. It weaves a connection between the rain-like sound of the stick, the visitor’s movement and the growth of the digital garden.",
     "text": {
-      "y": 1024,
-      "h": 556,
+      "y": 813,
+      "h": 450,
       "headingX": 131,
-      "headingY": 82,
+      "headingY": 40,
       "headingW": 523,
       "headingH": 32,
       "descriptionX": 131,
-      "descriptionY": 140,
+      "descriptionY": 98,
       "descriptionW": 523,
       "descriptionH": 341
     },
@@ -174,20 +174,20 @@ window.PORTFOLIO_SCENES = {
         "x": 0,
         "y": 0,
         "w": 1440,
-        "h": 1024,
+        "h": 813,
         "background": "#742222",
         "src": "../assets/garden-hero.mp4",
-        "ix": -262,
-        "iy": -237,
-        "iw": 2385,
-        "ih": 1342,
+        "ix": 0,
+        "iy": 0,
+        "iw": 1445,
+        "ih": 813,
         "kind": "video",
         "poster": "../assets/preview-digital-garden.webp"
       }
     ]
   },
   "whoami": {
-    "height": 1580,
+    "height": 1263,
     "background": "#000000",
     "title": "WHO AM I WHEN I WAKE UP, 2022\nOleksandr Bichuk and Roman Hartl",
     "description": "Link: https://youtu.be/5Kh0xI3qM18\n\nThe short documentary movie I have done during my studies in ZHdK, Zurich about Margo, who is originally from Ukraine, while Leo grew up in the Schaﬀhausen hinterland and comes from Germany. Both are currently in their 5th semester of studying Fine Arts, with Margo having only recently started at the ZHdK. Together, they create a painting as part of the Kammgarn West project in Schaﬀhausen, which involves adding color to a staircase. This collaborationmarks their first time working together on a large painting. Through the course of the film, we get to know Margo and Leo more intimately, gaining insight into their artistic practices and how their personal lives shape their approach to fine art.",
@@ -284,7 +284,7 @@ window.PORTFOLIO_SCENES = {
     ]
   },
   "the-time": {
-    "height": 1326,
+    "height": 1108,
     "background": "#000000",
     "title": "The Time, 2022\nOleksandr Bichuk",
     "description": "Link: https://youtu.be/NQYKTy_Gb70",

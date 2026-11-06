@@ -46,11 +46,12 @@ function render(){
 function paint(){
   for(const n of archive.querySelectorAll('.selected'))n.classList.remove('selected');
   const pos=ordered.findIndex(x=>x.id===activeId);
-  if(pos<0){canvas.classList.remove('has-hover');return;}
+  if(pos<0){canvas.classList.remove('has-hover','is-light-hover');picture.removeAttribute('src');return;}
   const p=ordered[pos];
   if(p.preview){picture.src=p.preview;picture.style.display='block';}
   else {picture.removeAttribute('src');picture.style.display='none';}
   canvas.classList.add('has-hover');
+  canvas.classList.toggle('is-light-hover',p.id==='digital-garden');
   for(const field of fields){
     const col=archive.querySelector('.column[data-field="'+field+'"]');
     for(const cell of col.querySelectorAll('.cell:not(.is-header)')){
@@ -86,6 +87,8 @@ function indexFromEvent(e){
 }
 archive.addEventListener('pointermove',e=>selectByIndex(indexFromEvent(e)));
 archive.addEventListener('pointerleave',clear);
+window.addEventListener('blur',clear);
+document.addEventListener('visibilitychange',()=>{ if(document.hidden) clear(); });
 archive.addEventListener('click',e=>{
  if(e.target.closest('.is-header'))return;
  const i=indexFromEvent(e);const p=ordered[i];if(p?.href)location.assign(p.href);
@@ -95,9 +98,11 @@ archive.addEventListener('keydown',e=>{
  if(e.key==='ArrowDown'||e.key==='ArrowUp'){
     e.preventDefault();selectByIndex(Math.min(ordered.length-1,Math.max(0,activeRow+(e.key==='ArrowDown'?1:-1))));
  }else if(e.key==='Enter'&&activeRow>=0){const p=ordered[activeRow];if(p?.href)location.assign(p.href);}
- else if(e.key==='Escape'){clear();}
+ else if(e.key==='Escape'){clear(); if(document.activeElement === archive) archive.blur();}
 });
 archive.addEventListener('focusout',e=>{if(!archive.contains(e.relatedTarget))clear();});
+// Esc clears the hover regardless of which child currently has keyboard focus.
+document.addEventListener('keydown', e => {if(e.key==='Escape'){clear();if(document.activeElement === archive)archive.blur();}});
 function resize(){
   // The Figma 1440px-wide index is a proportional layout, not a 1440px max-width.
   // Scale it to the full available browser width, including external displays.

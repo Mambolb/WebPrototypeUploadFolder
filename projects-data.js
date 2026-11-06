@@ -67,7 +67,7 @@ window.SITE_PROJECTS = [
     "medium": "Photo",
     "context": "Independent",
     "year": "2024-2025",
-    "preview": "assets/preview-irl.webp",
+    "preview": "assets/irl-home-background.png",
     "href": "projects/irl-glitch.html"
   },
   {

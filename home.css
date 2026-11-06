@@ -1,4 +1,5 @@
-/* Figma MergedTest_DefaultV2: layout; HoverV2: hover behavior ONLY.
+/* Figma CodeExport_ProtV6.rtf: HomePage_DefaultV2 for geometry, HoverDarkV2 for standard hover,
+   HoverLightDarkTypoV2 for Digital Garden only, HoverMailV2/ HoverInstV2 for header.
    Exact desktop canvas: 1440×1024, columns 524/261/262/262/131, row-height 28,
    text Geist Mono 12px/16px. No fills at rest. */
 :root{--row-height:28px;--header-height:28px;--col-name:524px;--col-category:261px;--col-medium:262px;--col-context:262px;--col-year:131px;--hover-blur:11.75px}
@@ -17,3 +18,20 @@
 .cell{position:absolute;left:0;width:100%;margin:0;border:0;border-radius:0;padding:4px 8px;display:flex;align-items:flex-start;justify-content:flex-start;font:inherit;line-height:16px;color:inherit;text-transform:uppercase;text-align:left;text-decoration:none;background:transparent;white-space:normal}
 .cell.selected{background:#000;color:#fff}.cell.is-header{top:0;height:28px;cursor:pointer}.cell.row-name{cursor:pointer}
 .cell:focus-visible,.archive:focus-visible{outline:1px solid #fff;outline-offset:-1px}
+
+/* V6 Figma: Digital Garden selected group only, light fill with dark type.
+   All other work retains dark fill / white type, including other projects using
+   the same source background. Background art remains unfiltered except blur. */
+.home-canvas.is-light-hover .cell.selected { background: #CBCCCF; color: #000; }
+/* Separate 132×56 header cell states; no effects on the archive beneath. */
+.header-item { cursor: default; }
+.header-mail:hover, .header-mail:focus-visible,
+.header-instagram:hover, .header-instagram:focus-visible {
+  background: #CBCCCF;
+  color: #000;
+}
+/* The archive keyboard focus should never draw a full-width white frame.
+   Keyboard focus on actual header sort buttons stays visible. */
+.archive:focus-visible { outline: none; }
+/* Do not allow unknown native focus paint to mask the precise Figma fills. */
+.home-canvas .header-item { outline-offset: -1px; }

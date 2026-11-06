@@ -1,32 +1,26 @@
-/* PhotoDedicatedPageTemplateV6 and V6Hover in CodeExport_ProtV5.rtf.
-   Exact reference frame: 1440x1239. No forced white selection in Stable.
-   Corresponding gallery card and catalogue row both turn white on Hover. */
-*{box-sizing:border-box}html,body{padding:0;margin:0;background:#000;color:#fff}html{scrollbar-width:none}body{overflow-x:hidden}
+/* Figma V6: PageIRLGlitchHuntingV3 and Hover, reference width 1440px. */
+* {box-sizing:border-box}
+html,body{margin:0;padding:0;background:#000;color:#fff}
+html{scrollbar-width:none}body{overflow-x:hidden}
 .irl-viewport{position:relative;width:1440px;height:1239px}
-.irl-canvas{position:absolute;left:0;top:0;width:1440px;min-height:1239px;overflow:hidden;transform-origin:top left;background:#000;color:#fff;font:400 12px/16px 'Geist Mono','Courier New',monospace}
-.irl-title,.irl-description{position:absolute;margin:0;padding:0;font:inherit;color:#fff}
+.irl-canvas{position:absolute;left:0;top:0;width:1440px;min-height:1239px;background:#000;color:#fff;overflow:hidden;transform-origin:top left;font:400 12px/16px 'Geist Mono','Courier New',monospace}
+.irl-title,.irl-description{position:absolute;color:#fff;font:inherit;margin:0;padding:0}
 .irl-title{left:130px;top:47px;width:523px;height:28px;text-transform:uppercase}
-.irl-description{left:131px;top:75px;width:395px;min-height:95px;white-space:normal}
-.irl-catalogue{position:absolute;left:131px;top:199px;width:394px;display:flex;flex-direction:column;gap:4px}
-.irl-catalogue-row{appearance:none;border:0;border-bottom:1px solid #989898;border-radius:0;padding:0;margin:0;background:transparent;color:#fff;height:28px;min-height:28px;width:394px;text-align:left;display:flex;align-items:center;cursor:pointer;font:inherit}
-.irl-catalogue-row .index{width:264px;flex:none;padding-left:0}
-.irl-catalogue-row .resolution{width:130px;flex:none}
-.irl-gallery{position:absolute;left:524px;top:75px;width:916px;min-height:1038px;padding:0 130px;display:grid;grid-template-columns:repeat(3,205px);column-gap:20px;row-gap:40px;align-items:start;justify-content:start}
-.irl-photo{display:flex;flex-direction:column;gap:4px;width:205px;padding:0;margin:0;border:0;border-radius:0;background:transparent;color:#fff;font:inherit;text-align:left;cursor:pointer;align-self:start;overflow:visible}
-.irl-photo img{display:block;object-fit:cover;max-width:none}
-.irl-photo figcaption{font:inherit;line-height:16px;color:inherit;min-height:16px;text-transform:uppercase}
-.irl-photo.selected,.irl-catalogue-row.selected{background:#fff;color:#000}
-.irl-photo.selected figcaption{color:#000}
-.irl-photo:focus-visible,.irl-catalogue-row:focus-visible{outline:1px solid white;outline-offset:2px}
-@media (max-width:760px){
-  /* Figma did not include a phone frame. This safe mobile fallback preserves image order and linked state. */
-  .irl-viewport{width:100% !important;height:auto !important}
-  .irl-canvas{transform:none !important;width:100%;min-height:100vh;padding:20px 12px 40px;position:relative}
-  .irl-title,.irl-description,.irl-catalogue,.irl-gallery{position:relative;top:auto;left:auto;width:auto;height:auto}
-  .irl-title{margin:0 0 12px}
-  .irl-description{margin:0 0 28px;max-width:395px}
-  .irl-catalogue{max-width:394px;margin-bottom:28px}
-  .irl-catalogue-row{width:100%}.irl-catalogue-row .index{width:65%}.irl-catalogue-row .resolution{width:35%}
-  .irl-gallery{padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 12px;max-width:100%}
-  .irl-photo{max-width:100%;width:100%}.irl-photo img{max-width:100%;width:100% !important;height:auto !important;aspect-ratio:3/4;object-fit:cover}
+.irl-description{left:131px;top:75px;width:395px;min-height:95px}
+.irl-gallery{position:absolute;top:199px;left:0;width:1440px;min-height:914px;padding:0 130px;display:flex;flex-wrap:wrap;gap:40px 20px;align-items:flex-start;align-content:flex-start}
+.irl-photo{flex:0 0 220px;display:flex;flex-direction:column;align-items:flex-start;gap:4px;width:220px;padding:0;margin:0;border:0;border-radius:0;background:transparent;color:#fff;font:inherit;text-align:left;cursor:pointer;overflow:visible}
+.irl-photo img{display:block;object-fit:cover;max-width:none;flex:none}
+.irl-caption{display:block;width:100%;font:inherit;line-height:16px;min-height:29px;text-transform:uppercase}
+.irl-photo.selected{background:#fff;color:#000}
+.irl-photo.selected .irl-caption{background:#fff;color:#000}
+.irl-photo:focus-visible{outline:1px solid #fff;outline-offset:2px}
+.irl-catalogue{display:none}
+@media(max-width:760px){
+  /* Temporary functional fallback; mobile design is scheduled separately. */
+  .irl-viewport{width:100%!important;height:auto!important}
+  .irl-canvas{position:relative;transform:none!important;width:100%;min-height:100vh;padding:20px 12px 40px;overflow:visible}
+  .irl-title,.irl-description,.irl-gallery{position:relative;left:auto;top:auto;width:auto;height:auto}
+  .irl-title{margin-bottom:12px}.irl-description{margin-bottom:28px}
+  .irl-gallery{padding:0;min-height:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 12px}
+  .irl-photo{width:100%;max-width:100%;flex-basis:auto}.irl-photo img{width:100%!important;height:auto!important;aspect-ratio:3/4;object-fit:cover}
 }
