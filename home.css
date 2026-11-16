@@ -45,3 +45,26 @@
 }
 /* Header external link uses Figma's exact type and hover without default underline. */
 .header-instagram { text-decoration:none; color:inherit; cursor:pointer; }
+
+
+/* V7 — HomePage_DefaultV3, CodeExport_ProtV7.rtf.
+   One-pixel separators match the new Figma layout. The first grouped item in
+   Category / Medium / Context / Year gets the same rule; its location is derived
+   from sorted content, not a fixed y position. Borders are inside the 28px cells. */
+.home-canvas .cell.is-header {
+  box-sizing: border-box;
+  background-color: #000;
+  border-bottom: 1px solid #CBCCCF;
+}
+.home-canvas .cell.first-merged {
+  box-sizing: border-box;
+  border-bottom: 1px solid #CBCCCF;
+}
+/* HoverDarkV2 in V7 gives the active first block a black border, and the
+   Digital Garden light variant keeps the #CBCCCF fill and black typography. */
+.home-canvas.has-hover:not(.is-light-hover) .cell.first-merged.selected {
+  border-bottom-color: #000;
+}
+.home-canvas.is-light-hover .cell.first-merged.selected {
+  border-bottom-color: #CBCCCF;
+}

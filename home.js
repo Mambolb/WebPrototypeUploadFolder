@@ -1,3 +1,4 @@
+/* V7 based on CodeExport_ProtV7.rtf. Header and first merged-group rules follow Figma DefaultV3. */
 /* All visual decisions are inherited from the supplied Figma frames.
    Data-driven merged cells, each represents a maximal contiguous equal-valued group.
    Crucial fix: pointer position identifies the actual ROW even when hovering a merged
@@ -40,7 +41,7 @@ function render(){
         const node=make('div','cell row-name',p.name);positionCell(node,i,i);node.dataset.projectId=p.id;col.append(node);
       });
     }else{
-      groupRuns(field).forEach(g=>{const node=make('div','cell merged',g.value);positionCell(node,g.start,g.end);col.append(node);});
+      groupRuns(field).forEach((g,groupIndex)=>{const node=make('div','cell merged',g.value);if(groupIndex===0)node.classList.add('first-merged');positionCell(node,g.start,g.end);col.append(node);});
     }return col;
   });
   archive.replaceChildren(...columns);
