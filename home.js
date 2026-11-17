@@ -1,4 +1,4 @@
-/* V7 based on CodeExport_ProtV7.rtf. Header and first merged-group rules follow Figma DefaultV3. */
+/* Portfolio V7.1 — remove unintended separator bars; restore palette from WebSiteTable.numbers. */
 /* All visual decisions are inherited from the supplied Figma frames.
    Data-driven merged cells, each represents a maximal contiguous equal-valued group.
    Crucial fix: pointer position identifies the actual ROW even when hovering a merged
@@ -41,7 +41,7 @@ function render(){
         const node=make('div','cell row-name',p.name);positionCell(node,i,i);node.dataset.projectId=p.id;col.append(node);
       });
     }else{
-      groupRuns(field).forEach((g,groupIndex)=>{const node=make('div','cell merged',g.value);if(groupIndex===0)node.classList.add('first-merged');positionCell(node,g.start,g.end);col.append(node);});
+      groupRuns(field).forEach(g=>{const node=make('div','cell merged',g.value);positionCell(node,g.start,g.end);col.append(node);});
     }return col;
   });
   archive.replaceChildren(...columns);
@@ -52,13 +52,14 @@ function render(){
 function paint(){
   for(const n of archive.querySelectorAll('.selected'))n.classList.remove('selected');
   const pos=ordered.findIndex(x=>x.id===activeId);
-  if(pos<0){canvas.classList.remove('has-hover','is-light-hover');canvas.removeAttribute('data-preview');picture.removeAttribute('src');return;}
+  if(pos<0){canvas.classList.remove('has-hover');canvas.removeAttribute('data-preview');canvas.style.removeProperty('--selection-fill');canvas.style.removeProperty('--selection-type');picture.removeAttribute('src');return;}
   const p=ordered[pos];
   canvas.dataset.preview=p.id;
   if(p.preview){picture.src=p.preview;picture.style.display='block';}
   else {picture.removeAttribute('src');picture.style.display='none';}
   canvas.classList.add('has-hover');
-  canvas.classList.toggle('is-light-hover',p.id==='digital-garden');
+  canvas.style.setProperty('--selection-fill',p.selectionColor || '#000000');
+  canvas.style.setProperty('--selection-type',p.selectionTextColor || '#FFFFFF');
   for(const field of fields){
     const col=archive.querySelector('.column[data-field="'+field+'"]');
     for(const cell of col.querySelectorAll('.cell:not(.is-header)')){

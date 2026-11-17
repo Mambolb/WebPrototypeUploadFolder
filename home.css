@@ -16,13 +16,10 @@
 .archive{position:absolute;top:56px;left:0;z-index:2;display:flex;align-items:flex-start;width:1440px;min-height:968px;outline:none}
 .column{position:relative;flex:none;min-height:968px}.column[data-field=name]{width:var(--col-name)}.column[data-field=category]{width:var(--col-category)}.column[data-field=medium]{width:var(--col-medium)}.column[data-field=context]{width:var(--col-context)}.column[data-field=year]{width:var(--col-year)}
 .cell{position:absolute;left:0;width:100%;margin:0;border:0;border-radius:0;padding:4px 8px;display:flex;align-items:flex-start;justify-content:flex-start;font:inherit;line-height:16px;color:inherit;text-transform:uppercase;text-align:left;text-decoration:none;background:transparent;white-space:normal}
-.cell.selected{background:#000;color:#fff}.cell.is-header{top:0;height:28px;cursor:pointer}.cell.row-name{cursor:pointer}
+.cell.selected{background:var(--selection-fill,#000000);color:var(--selection-type,#FFFFFF)}.cell.is-header{top:0;height:28px;cursor:pointer}.cell.row-name{cursor:pointer}
 .cell:focus-visible,.archive:focus-visible{outline:1px solid #fff;outline-offset:-1px}
 
-/* V6 Figma: Digital Garden selected group only, light fill with dark type.
-   All other work retains dark fill / white type, including other projects using
-   the same source background. Background art remains unfiltered except blur. */
-.home-canvas.is-light-hover .cell.selected { background: #CBCCCF; color: #000; }
+/* V7.1: selection fill and text colors are read from projects-data.js. */
 /* Separate 132×56 header cell states; no effects on the archive beneath. */
 .header-item { cursor: default; }
 .header-mail:hover, .header-mail:focus-visible,
@@ -47,24 +44,5 @@
 .header-instagram { text-decoration:none; color:inherit; cursor:pointer; }
 
 
-/* V7 — HomePage_DefaultV3, CodeExport_ProtV7.rtf.
-   One-pixel separators match the new Figma layout. The first grouped item in
-   Category / Medium / Context / Year gets the same rule; its location is derived
-   from sorted content, not a fixed y position. Borders are inside the 28px cells. */
-.home-canvas .cell.is-header {
-  box-sizing: border-box;
-  background-color: #000;
-  border-bottom: 1px solid #CBCCCF;
-}
-.home-canvas .cell.first-merged {
-  box-sizing: border-box;
-  border-bottom: 1px solid #CBCCCF;
-}
-/* HoverDarkV2 in V7 gives the active first block a black border, and the
-   Digital Garden light variant keeps the #CBCCCF fill and black typography. */
-.home-canvas.has-hover:not(.is-light-hover) .cell.first-merged.selected {
-  border-bottom-color: #000;
-}
-.home-canvas.is-light-hover .cell.first-merged.selected {
-  border-bottom-color: #CBCCCF;
-}
+/* V7.1: unwanted header and first-merged border rules removed.
+   Background and merged-cell layout remain unchanged. */

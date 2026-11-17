@@ -1,4 +1,5 @@
-/* V6.1: metadata verified against WebSiteTable.numbers in Archive(2).zip (Nov 6). */
+/* Portfolio V7.1: selection colors transcribed from WebSiteTable.numbers, Archive(3).zip.
+   The original sheet uses "0" for black; its light selection color is CBCCCF. */
 window.SITE_PROJECTS = [
   {
     "id": "design-as-epistemic",
@@ -8,7 +9,9 @@ window.SITE_PROJECTS = [
     "context": "UdK Berlin",
     "year": "2026",
     "preview": "assets/preview-design.webp",
-    "href": "projects/design-as-epistemic.html"
+    "href": "projects/design-as-epistemic.html",
+    "selectionColor": "#000000",
+    "selectionTextColor": "#FFFFFF"
   },
   {
     "id": "shahed",
@@ -18,7 +21,9 @@ window.SITE_PROJECTS = [
     "context": "UdK Berlin",
     "year": "2026",
     "preview": "assets/preview-shahed.webp",
-    "href": "projects/shahed.html"
+    "href": "projects/shahed.html",
+    "selectionColor": "#000000",
+    "selectionTextColor": "#FFFFFF"
   },
   {
     "id": "turbulent",
@@ -28,7 +33,9 @@ window.SITE_PROJECTS = [
     "context": "Independent",
     "year": "2024",
     "preview": "assets/preview-turbulent.webp",
-    "href": "projects/turbulent.html"
+    "href": "projects/turbulent.html",
+    "selectionColor": "#000000",
+    "selectionTextColor": "#FFFFFF"
   },
   {
     "id": "enzyklopaedie",
@@ -38,7 +45,9 @@ window.SITE_PROJECTS = [
     "context": "Independent",
     "year": "2025",
     "preview": "assets/preview-enzyklopaedie.webp",
-    "href": "projects/enzyklopaedie.html"
+    "href": "projects/enzyklopaedie.html",
+    "selectionColor": "#000000",
+    "selectionTextColor": "#FFFFFF"
   },
   {
     "id": "whoami",
@@ -48,7 +57,9 @@ window.SITE_PROJECTS = [
     "context": "ZHdK Zurich",
     "year": "2022",
     "preview": "assets/preview-whoami.webp",
-    "href": "projects/whoami.html"
+    "href": "projects/whoami.html",
+    "selectionColor": "#CBCCCF",
+    "selectionTextColor": "#000000"
   },
   {
     "id": "digital-garden",
@@ -58,7 +69,9 @@ window.SITE_PROJECTS = [
     "context": "UdK Berlin",
     "year": "2026",
     "preview": "assets/preview-digital-garden.webp",
-    "href": "projects/digital-garden.html"
+    "href": "projects/digital-garden.html",
+    "selectionColor": "#CBCCCF",
+    "selectionTextColor": "#000000"
   },
   {
     "id": "irl-glitch",
@@ -68,7 +81,9 @@ window.SITE_PROJECTS = [
     "context": "Independent",
     "year": "2023-2024",
     "preview": "assets/irl-home-background.png",
-    "href": "projects/irl-glitch.html"
+    "href": "projects/irl-glitch.html",
+    "selectionColor": "#000000",
+    "selectionTextColor": "#FFFFFF"
   },
   {
     "id": "the-time",
@@ -78,6 +93,8 @@ window.SITE_PROJECTS = [
     "context": "ZHdK Zurich",
     "year": "2022",
     "preview": "assets/preview-time.webp",
-    "href": "projects/the-time.html"
+    "href": "projects/the-time.html",
+    "selectionColor": "#CBCCCF",
+    "selectionTextColor": "#000000"
   }
 ];
